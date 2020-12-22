@@ -147,7 +147,7 @@ public class LinkedListDeque<T> {
 		} else {
 			int currIndex = index;
 			Node<T> curr = frontSentiel;
-			while (currIndex >0) {
+			while (currIndex >= 0) {
 				curr = curr.next;
 				currIndex --; 
 			}
@@ -172,7 +172,20 @@ public class LinkedListDeque<T> {
 	
 //	public static void main(String[] args) {
 //		// TODO Auto-generated method stub
+//		LinkedListDeque<String> lld1 = new LinkedListDeque<String>();
 //
+//		
+//		lld1.addFirst("front");
+//		
+//		// The && operator is the same as "and" in Python.
+//		// It's a binary operator that returns true if both arguments true, and false otherwise.
+//		
+//		lld1.addLast("middle");
+//		
+//
+//		lld1.addLast("back");
+//		
+//		System.out.println(lld1.get(2));
 //	}
 
 }

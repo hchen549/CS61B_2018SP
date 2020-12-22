@@ -1,10 +1,10 @@
 
 public class LinkedListDeque<T> {
 	
-	public class Node<T>{
-		public T item ;
-		public Node next;
-		public Node prev;
+	private class Node<T>{
+		private T item ;
+		private Node next;
+		private Node prev;
 		
 		public Node() {
 			this.item = null;
@@ -170,9 +170,9 @@ public class LinkedListDeque<T> {
 		
 	}
 	
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//
+//	}
 
 }

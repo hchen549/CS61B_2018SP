@@ -84,7 +84,10 @@ public class IntList {
         //TODO:  fill in method
         if (A == null && B == null){
             return null;
-        } else{
+        } else if (A == null && B != null){
+            A = B;
+            return A;
+        } else {
             IntList ptr = A;
             while (ptr.rest != null){
                 ptr = ptr.rest;
@@ -103,7 +106,27 @@ public class IntList {
         //TODO:  fill in method
         if (A == null && B == null){
             return null;
-        } else{
+        } else if (A == null && B != null){
+            IntList res = new IntList(B.first, null);
+            IntList curr = res;
+            IntList pointer = B.rest;
+            while (pointer != null){
+                curr.rest = new IntList(pointer.first, null);
+                curr = curr.rest;
+                pointer = pointer.rest;
+            }
+            return res;
+        } else if (A != null && B == null){
+            IntList res = new IntList(A.first, null);
+            IntList curr = res;
+            IntList pointer = A.rest;
+            while (pointer != null){
+                curr.rest = new IntList(pointer.first, null);
+                curr = curr.rest;
+                pointer = pointer.rest;
+            }
+            return res;
+        } else {
             IntList res = new IntList(A.first, null);
             IntList curr = res;
             IntList pointer = A.rest;
